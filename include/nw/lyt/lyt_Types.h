@@ -13,6 +13,17 @@ const int UserDataStrMax = 8;
 // ...
 const int TexMapMax = 3;
 
+enum TextColor
+{
+    TEXTCOLOR_TOP,
+    TEXTCOLOR_BOTTOM,
+    TEXTCOLOR_MAX,
+
+    TextColor_Top = TEXTCOLOR_TOP,
+    TextColor_Bottom = TEXTCOLOR_BOTTOM,
+    TextColor_MaxTextColor = TEXTCOLOR_MAX,
+};
+
 struct Size
 {
     Size()
