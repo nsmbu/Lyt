@@ -7,7 +7,42 @@
 
 namespace nw { namespace lyt {
 
+const int ResourceNameStrMax = 24;
+// ...
+const int UserDataStrMax = 8;
+// ...
 const int TexMapMax = 3;
+
+struct Size
+{
+    Size()
+        : width(0), height(0)
+    {
+    }
+
+    Size(f32 aWidth, f32 aHeight)
+        : width(aWidth), height(aHeight)
+    {
+    }
+
+    Size(const Size& other)
+        : width(other.width), height(other.height)
+    {
+    }
+
+    static Size Create(float aWidth, float aHeight)
+    {
+        Size size;
+
+        size.width = aWidth;
+        size.height = aHeight;
+
+        return size;
+    }
+
+    f32 width;
+    f32 height;
+};
 
 } } // namespace nw::lyt
 
